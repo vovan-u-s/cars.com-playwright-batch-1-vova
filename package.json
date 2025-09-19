@@ -1,0 +1,23 @@
+{
+  "name": "cars.com-playwright-batch-1-vova",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vovan-u-s/cars.com-playwright-batch-1-vova.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vovan-u-s/cars.com-playwright-batch-1-vova/issues"
+  },
+  "homepage": "https://github.com/vovan-u-s/cars.com-playwright-batch-1-vova#readme",
+  "dependencies": {
+    "@playwright/test": "^1.55.0"
+  }
+}
