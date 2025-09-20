@@ -3,7 +3,6 @@ export class Homepage {
 
   title: Locator;
   message: Locator;
-  newused: Locator;
   make: Locator;
   model: Locator;
   distace: Locator;
@@ -14,7 +13,6 @@ export class Homepage {
   constructor(page: Page) {
     this.title = page.locator('h1[class="hero-title "]')
     this.message = page.locator('spark-stack[class="search-bar-horizontal-or"]')
-    this.newused = page.locator('select[name="stock_type"]')
     this.make = page.locator('select[name="makes[]"]')
     this.model = page.locator('select[name="models[]"]')
     this.distace = page.locator('select[name="maximum_distance"]')
@@ -26,5 +24,12 @@ export class Homepage {
   }
   async myMessage(expectedMessage: string): Promise<void> {
     await expect(this.message).toHaveText(expectedMessage)
+  }
+  async searchWIthTheDetails(make:string,model:string,distance:string,zip:string):Promise<void>{
+    await this.make.selectOption(make)
+    await this.model.selectOption(model)
+    await this.distace.selectOption(distance)
+    await this.zip.fill(zip)
+    await this.showButton.click()
   }
 }

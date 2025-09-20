@@ -6,4 +6,5 @@ test('homepage of cars.com', async ({ page }) => {
     await page.goto('https://www.cars.com/')
     await homepage.ourMessage('Imagine the possibilities')
     await homepage.myMessage('- Or search by -')
+    await homepage.searchWIthTheDetails('bmw','bmw-m5','10','60090')
 })
