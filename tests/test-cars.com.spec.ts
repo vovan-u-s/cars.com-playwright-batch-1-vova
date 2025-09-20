@@ -10,4 +10,5 @@ test('homepage of cars.com', async ({ page }) => {
     await page.waitForTimeout(5_000)
      let searchPage=new SearchPage(page)
     await searchPage.expectedTags(['BMW','M5'])
+    await searchPage.expectedSearchBlock('bmw','10','60090')
 })
