@@ -1,4 +1,5 @@
 import { expect, Locator, Page } from '@playwright/test'
+import { SearchPage } from './searchPage';
 export class Homepage {
 
   title: Locator;
