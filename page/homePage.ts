@@ -25,7 +25,7 @@ export class Homepage {
   async myMessage(expectedMessage: string): Promise<void> {
     await expect(this.message).toHaveText(expectedMessage)
   }
-  async searchWIthTheDetails(make:string,model:string,distance:string,zip:string):Promise<void>{
+  async searchWIthTheDetails(make: string, model: string, distance: string, zip: string): Promise<void> {
     await this.make.selectOption(make)
     await this.model.selectOption(model)
     await this.distace.selectOption(distance)
