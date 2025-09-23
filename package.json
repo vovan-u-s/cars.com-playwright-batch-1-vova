@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/vovan-u-s/cars.com-playwright-batch-1-vova#readme",
   "dependencies": {
-    "@playwright/test": "^1.55.0"
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.5.2"
   }
 }
