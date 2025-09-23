@@ -13,7 +13,11 @@ test('homepage of cars.com', async ({ page }) => {
     await searchPage.expectedTags(['BMW','M5'])
     await searchPage.expectedSearchBlock('bmw','10','60090')
     
-    await homepage.clickNewCarsHeader()
+   
+})
+test('NewCars test task', async ({ page }) => {
+    let homepage = new Homepage(page)
+ await homepage.clickNewCarsHeader()
     let myNewCars=new NewCars(page)
     await myNewCars.expectedTitle('Find your next  new car')
 })

@@ -19,7 +19,7 @@ export class Homepage {
     this.distace = page.locator('select[name="maximum_distance"]')
     this.zip = page.locator('input[name = "zip"]')
     this.showButton = page.locator('spark-button[trid="ispsHAiuJe1hiWnAnf44kA"] ')
-    this.newCars=page.locator("getByLabel('primary').getByRole('link', { name: 'New Cars' })")
+    this.newCars=page.getByLabel('primary').getByRole('link', { name: 'New Cars' })
   }
   async ourMessage(expectedTitle: string): Promise<void> {
     await expect(this.title).toHaveText(expectedTitle)
