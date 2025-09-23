@@ -23,8 +23,4 @@ export class SearchPage {
         await expect(this.zip).toHaveValue(zip)
        
     }
-
-
-
-
 }

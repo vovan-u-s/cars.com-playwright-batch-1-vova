@@ -9,7 +9,7 @@ export class Homepage {
   distace: Locator;
   zip: Locator;
   showButton: Locator;
-
+  newCars:Locator;
 
   constructor(page: Page) {
     this.title = page.locator('h1[class="hero-title "]')
@@ -19,6 +19,7 @@ export class Homepage {
     this.distace = page.locator('select[name="maximum_distance"]')
     this.zip = page.locator('input[name = "zip"]')
     this.showButton = page.locator('spark-button[trid="ispsHAiuJe1hiWnAnf44kA"] ')
+    this.newCars=page.locator("getByLabel('primary').getByRole('link', { name: 'New Cars' })")
   }
   async ourMessage(expectedTitle: string): Promise<void> {
     await expect(this.title).toHaveText(expectedTitle)
@@ -32,5 +33,9 @@ export class Homepage {
     await this.distace.selectOption(distance)
     await this.zip.fill(zip)
     await this.showButton.click()
+
+  }
+  async clickNewCarsHeader():Promise<void>{
+    await this.newCars.click()
   }
 }

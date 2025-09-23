@@ -1,6 +1,7 @@
 import { test } from '@playwright/test'
 import { Homepage } from '../page/homePage'
 import { SearchPage } from '../page/searchPage'
+import { NewCars } from '../page/newCars'
 test('homepage of cars.com', async ({ page }) => {
     let homepage = new Homepage(page)
     await page.goto('https://www.cars.com/')
@@ -11,4 +12,8 @@ test('homepage of cars.com', async ({ page }) => {
      let searchPage=new SearchPage(page)
     await searchPage.expectedTags(['BMW','M5'])
     await searchPage.expectedSearchBlock('bmw','10','60090')
+    
+    await homepage.clickNewCarsHeader()
+    let myNewCars=new NewCars(page)
+    await myNewCars.expectedTitle('Find your next  new car')
 })
